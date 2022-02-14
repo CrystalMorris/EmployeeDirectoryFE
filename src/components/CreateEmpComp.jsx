@@ -37,11 +37,11 @@ const CreateEmpComp =() => {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className ="card col-md-8 offset-md-2">
+                        <div className ="card col-md-8 offset-md-2 ">
                             <h3 className="text-center">Add Employee</h3>
-                            <div className="card-body">
-                                <form>
-                                    <div className="form-group">
+                            <div className="card-body ">
+                                <form >
+                                    <div className="form-group ">
                                         <label>First Name</label>
                                         <input placeholder="First Name" name="firstName"  type="text" className="form-control" value={enteredFName} onChange={changeFirstNameHandler} />
                                     </div>
@@ -53,9 +53,11 @@ const CreateEmpComp =() => {
                                         <label>Email</label>
                                         <input placeholder="Email" name="email"  type="text" className="form-control" value={enteredEmail} onChange={changeEmailHandler} />
                                     </div>
-                                    <div className="form-group offset-7 mt-3">
-                                        <button className="btn btn-success" onClick={submitHandler}>Save</button>  
-                                        <button className="btn btn-danger" onClick={()=>{navigate('/employees')}} style={{marginLeft: "10px"}}>Cancel</button> 
+                                   
+                                      <div className="row justify-content-between">     
+                                        <button className="btn btn-success col-3 align-self-left  m-3 " onClick={submitHandler}>Save</button>  
+                                    
+                                        <button className="btn btn-danger col-3 align-self-right  m-3" onClick={()=>{navigate('/employees')}} style={{marginLeft: "10px"}}>Cancel</button> 
                                     </div>
                    
                                 </form>
