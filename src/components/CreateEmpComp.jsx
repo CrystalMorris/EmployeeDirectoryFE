@@ -37,7 +37,7 @@ const CreateEmpComp =() => {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className ="card col-md-6 offset-md-3 offset-md-3">
+                        <div className ="card col-md-8 offset-md-2">
                             <h3 className="text-center">Add Employee</h3>
                             <div className="card-body">
                                 <form>
@@ -53,9 +53,11 @@ const CreateEmpComp =() => {
                                         <label>Email</label>
                                         <input placeholder="Email" name="email"  type="text" className="form-control" value={enteredEmail} onChange={changeEmailHandler} />
                                     </div>
-                                    <button className="btn btn-success" onClick={submitHandler}>Save</button>  
-                                    <button className="btn btn-danger" onClick={()=>{navigate('/employees')}} style={{marginLeft: "10px"}}>Cancel</button> 
-
+                                    <div className="form-group offset-7 mt-3">
+                                        <button className="btn btn-success" onClick={submitHandler}>Save</button>  
+                                        <button className="btn btn-danger" onClick={()=>{navigate('/employees')}} style={{marginLeft: "10px"}}>Cancel</button> 
+                                    </div>
+                   
                                 </form>
 
                             </div>
