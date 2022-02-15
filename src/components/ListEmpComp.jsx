@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
 import AddEmpButton from './AddEmpButton';
+import SelectEmpButton from './SelectEmpButton';
 
 
 
@@ -17,19 +18,23 @@ class ListEmpComp extends Component {
     componentDidMount(){
         EmployeeService.getEmployees().then((res)=>{
             this.setState({employees: res.data});
-        
+        console.log(this.state);
             
         })
     
-}
+    }
 
- 
+    getUrl(){ 
+        const url = window.location.href;
+        console.log(url);
+        }
     
 
     render() {
         return (
             <div>
-                <h2 className='text-center'>Employees List<AddEmpButton /></h2>
+                
+                <h2 className='text-center'>Employees List <AddEmpButton /></h2>
 
                 <div className='row'>
                     <table className='table table-striped tabled-bordered'>
@@ -46,12 +51,15 @@ class ListEmpComp extends Component {
                             {
                                this.state.employees.map(
                                    employee =>
-                                   <tr key= {employee.id}>
+                                   <tr key= {employee.id} > 
+                                                                   
                                        <td>{employee.id}</td>
                                        <td>{ employee.firstName }</td>
                                        <td>{ employee.lastName }</td> 
-                                       <td>{ employee.email}</td>
+                                       <td>{ employee.email}</td> 
+                                       <td>< SelectEmpButton  emp={employee} /></td>
                                    </tr>
+                                   // 
                                )
                             }
                         </tbody>
