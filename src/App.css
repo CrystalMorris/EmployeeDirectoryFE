@@ -61,7 +61,7 @@
 
 }
 thead{
-  
+  height: 100px;
   z-index: 1;
   position: relative;
   top:100;
@@ -71,7 +71,7 @@ th{
   
   color:black;
   position: sticky;
-  top:100px;  
+  top:50px;  
   z-index: 3;
   text-align: center;
 
