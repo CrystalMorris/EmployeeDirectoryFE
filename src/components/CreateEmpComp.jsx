@@ -24,9 +24,14 @@ const CreateEmpComp =() => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        if(enteredFName !== '' && enteredLName !=='' && enteredEmail !=='') {
 
         EmployeeService.saveEmployee(enteredFName, enteredLName, enteredEmail);
         alert('Employee Saved As: ' + enteredFName + ', ' + enteredLName+ ', '+ enteredEmail )
+
+        }else{ alert("All Fields are required. Please try again.");
+         return navigate('/add-employee')}
+
         
 
         return navigate('/employees');
