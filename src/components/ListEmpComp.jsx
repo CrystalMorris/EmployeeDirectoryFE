@@ -34,13 +34,13 @@ class ListEmpComp extends Component {
         return (
             <div>
                 
-                <h2 className='text-center'>Employees List <AddEmpButton /></h2>
+                <h2 className='text-left  subheader'>Employees List <AddEmpButton /></h2>
 
                 <div className='row'>
                     <table className='table table-striped tabled-bordered'>
-                        <thead>
+                        <thead >
                             <tr>
-                                <th>Id</th>
+                                <th >Id</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
@@ -67,7 +67,9 @@ class ListEmpComp extends Component {
 
 
                 </div>
-
+                 <div className="footerSpacer">
+                     <p id="eol">End of List</p>
+                </div>           
 
             </div>
         );
