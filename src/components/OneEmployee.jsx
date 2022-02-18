@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import EmployeeService from "../services/EmployeeService";
 import UpdateEmpComp from "./UpdateEmpComp";
+import DeleteEmpButton from "./DeleteEmpButton";
 
-import UpdateEmpButton from "./SelectEmpButton";
+
 
 class OneEmployee extends Component {
   constructor(props) {
@@ -47,12 +48,14 @@ class OneEmployee extends Component {
                 <td>{this.state.firstName}</td>
                 <td>{this.state.lastName}</td>
                 <td>{this.state.email}</td>
+                <td><DeleteEmpButton emp={this.state} /></td>
               </tr>
             </tbody>
           </table>
         </div>
         <div className="row">
           <UpdateEmpComp emp={this.state} />
+          
         </div>
       </div>
     );

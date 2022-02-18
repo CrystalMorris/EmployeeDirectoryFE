@@ -3,6 +3,7 @@ import axios from "axios";
 const EMP_API_BASE_URL = "http://localhost:8080/api/v1/employees";
 const EMP_API_CREATE_URL = "http://localhost:8080/api/v1/add-employee";
 const EMP_API_UPDATE_URL = "http://localhost:8080/api/v1/update-employee/";
+const EMP_API_DELETE_URL = "http://localhost:8080/api/v1/delete-employee/";
 
 class EmployeeService {
   getEmployees() {
@@ -33,6 +34,10 @@ class EmployeeService {
   updateEmployeeLastName(id, lName) {
     console.log(id + "," + lName);
     axios.put(EMP_API_UPDATE_URL + id, { lastName: lName });
+  }
+
+  deleteEmployee(id){
+    axios.delete(EMP_API_DELETE_URL +id);
   }
 }
 export default new EmployeeService();
