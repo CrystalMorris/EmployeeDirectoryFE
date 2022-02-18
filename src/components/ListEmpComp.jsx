@@ -27,10 +27,10 @@ class ListEmpComp extends Component {
     return (
       <div>
         <h2 className="text-left  subheader">
-          Employees List <AddEmpButton />
+          Employees List
         </h2>
-
-        <div className="row">
+ 
+        <div className="row"><AddEmpButton />
           <table className="table table-striped tabled-bordered">
             <thead>
               <tr>
@@ -42,6 +42,7 @@ class ListEmpComp extends Component {
               </tr>
             </thead>
             <tbody>
+              {console.table(this.state.employees)}
               {this.state.employees.map(
                 (employee) => (
                   <tr key={employee.id}>
@@ -54,7 +55,7 @@ class ListEmpComp extends Component {
                     </td>
                   </tr>
                 )
-                //
+                
               )}
             </tbody>
           </table>
