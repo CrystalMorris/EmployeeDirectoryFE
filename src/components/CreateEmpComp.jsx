@@ -6,6 +6,7 @@ const CreateEmpComp = () => {
   const [enteredFName, setFName] = useState("");
   const [enteredLName, setLName] = useState("");
   const [enteredEmail, setEmail] = useState("");
+  const [enteredAge, setAge] = useState("");
 
   let navigate = useNavigate();
   const changeFirstNameHandler = (e) => {
@@ -20,17 +21,23 @@ const CreateEmpComp = () => {
     setEmail(e.target.value);
   };
 
+  const changeAgeHandler = (e) => {
+    setAge(e.target.value);
+  };
+
   const submitHandler = (e) => {
     e.preventDefault();
-    if (enteredFName !== "" && enteredLName !== "" && enteredEmail !== "") {
-      EmployeeService.saveEmployee(enteredFName, enteredLName, enteredEmail);
+    if (enteredFName !== "" && enteredLName !== "" && enteredEmail !== "" && enteredAge !== "") {
+      EmployeeService.saveEmployee(enteredFName, enteredLName, enteredEmail, enteredAge);
       alert(
         "Employee Saved As: " +
           enteredFName +
           ", " +
           enteredLName +
           ", " +
-          enteredEmail
+          enteredEmail +
+          ", " + enteredAge
+
       );
     } else {
       alert("All Fields are required. Please try again.");
@@ -79,6 +86,17 @@ const CreateEmpComp = () => {
                     className="form-control"
                     value={enteredEmail}
                     onChange={changeEmailHandler}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Age</label>
+                  <input
+                    placeholder="Age"
+                    name="age"
+                    type="text"
+                    className="form-control"
+                    value={enteredAge}
+                    onChange={changeAgeHandler}
                   />
                 </div>
 

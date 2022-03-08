@@ -9,9 +9,11 @@ const UpdateEmpComp = (emp) => {
   const [enteredFName, setFName] = useState("");
   const [enteredLName, setLName] = useState("");
   const [enteredEmail, setEmail] = useState("");
+  const [enteredAge, setAge] = useState("");
   const originalFName = emp.emp.firstName;
   const originalLName = emp.emp.lastName;
   const originalEmail = emp.emp.email;
+  const originalAge = emp.emp.age;
 
   useEffect(() => {
     setId(emp.emp.id);
@@ -32,6 +34,9 @@ const UpdateEmpComp = (emp) => {
   const changeEmailHandler = (e) => {
     setEmail(e.target.value);
   };
+  const changeAgeHandler = (e) => {
+    setAge(e.target.value);
+  };
   //I have separate method for updating each field so fields aren't accidently deleted by being left blank
   const submitHandler = (e) => {
     const url = window.location.href;
@@ -49,6 +54,9 @@ const UpdateEmpComp = (emp) => {
     if (enteredEmail !== "") {
       EmployeeService.updateEmployeeEmail(id, enteredEmail);
     }
+    if (enteredAge !== "") {
+      EmployeeService.updateEmployeeAge(id, enteredAge);
+    }
 
     alert(
       "Employee Has been Updated :" +
@@ -56,7 +64,9 @@ const UpdateEmpComp = (emp) => {
         ", " +
         emp.emp.lastName +
         ", " +
-        emp.emp.email
+        emp.emp.email +
+        ", " + 
+        emp.emp.age
     );
 
     return navigate("/employees");

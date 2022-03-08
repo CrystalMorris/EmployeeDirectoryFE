@@ -11,12 +11,13 @@ class EmployeeService {
     return axios.get(EMP_API_BASE_URL);
   }
 
-  saveEmployee(fName, lName, eml) {
+  saveEmployee(fName, lName, eml, age) {
     console.log(fName + "," + lName + "," + eml);
     axios.post(EMP_API_CREATE_URL, {
       firstName: fName,
       lastName: lName,
       email: eml,
+      age: age
     });
   }
 
@@ -34,6 +35,10 @@ class EmployeeService {
   updateEmployeeLastName(id, lName) {
     console.log(id + "," + lName);
     axios.put(EMP_API_UPDATE_URL + id, { lastName: lName });
+  }
+  updateEmployeeLastName(id, age) {
+    console.log(id + "," + age);
+    axios.put(EMP_API_UPDATE_URL + id, { age: age });
   }
 
   deleteEmployee(id){

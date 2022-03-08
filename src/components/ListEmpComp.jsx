@@ -30,7 +30,7 @@ class ListEmpComp extends Component {
           Employees List
         </h2>
  
-        <div className="row"><AddEmpButton />
+        <div className="row">
           <table className="table table-striped tabled-bordered">
             <thead>
               <tr>
@@ -38,6 +38,7 @@ class ListEmpComp extends Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Age</th>
                 <th> Actions</th>
               </tr>
             </thead>
@@ -50,6 +51,7 @@ class ListEmpComp extends Component {
                     <td>{employee.firstName}</td>
                     <td>{employee.lastName}</td>
                     <td>{employee.email}</td>
+                    <td>{employee.age}</td>
                     <td>
                       <SelectEmpButton emp={employee} />
                     </td>

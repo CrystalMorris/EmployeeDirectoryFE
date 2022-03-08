@@ -39,6 +39,7 @@ class OneEmployee extends Component {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
+                <th>Age</th>
                 <th> Actions</th>
               </tr>
             </thead>
@@ -48,6 +49,7 @@ class OneEmployee extends Component {
                 <td>{this.state.firstName}</td>
                 <td>{this.state.lastName}</td>
                 <td>{this.state.email}</td>
+                <td>{this.state.age}</td>
                 <td><DeleteEmpButton emp={this.state} /></td>
               </tr>
             </tbody>
