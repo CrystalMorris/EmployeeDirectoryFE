@@ -5,7 +5,7 @@ function AddEmpButton() {
 
   return (
     <button
-      className="addemployee btn btn-primary  offset-6"
+      className="addemployee btn btn-primary  col-2 offset-8"
       onClick={() => {
         navigate("/add-employee");
       }}

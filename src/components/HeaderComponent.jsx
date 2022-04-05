@@ -11,10 +11,10 @@ class HeaderComponent extends Component {
   render() {
     return (
       <div>
-        <header>
-          <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+        <header >
+          <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-dark px-5">
             <div>
-              <a href="/employees" className="navbar-brand  offset-3">
+              <a href="/employees" className="navbar-brand col-md-2 ">
                 Employee Management App
               </a>
             </div><AddEmpButton />

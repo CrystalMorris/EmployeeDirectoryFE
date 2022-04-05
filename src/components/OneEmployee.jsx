@@ -30,7 +30,7 @@ class OneEmployee extends Component {
   render() {
        return (
       <div>
-        <h2 className="text-center subheader">Employee</h2>
+        <h2 className="text-center subheader  fixed col-md-2 offset-3">Employee</h2>
 
         <div className="row">
           <table className="table table-striped tabled-bordered ">
