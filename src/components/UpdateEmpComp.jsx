@@ -40,7 +40,7 @@ const UpdateEmpComp = (emp) => {
   //I have separate method for updating each field so fields aren't accidently deleted by being left blank
   const submitHandler = (e) => {
     const url = window.location.href;
-    const id = url.slice(32);
+    const id = url.slice(44);
     console.log(emp.emp.id);
     e.preventDefault();
     if (enteredFName !== "") {
