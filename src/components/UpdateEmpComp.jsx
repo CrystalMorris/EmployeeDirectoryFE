@@ -101,6 +101,7 @@ const UpdateEmpComp = (emp) => {
                     value={enteredLName}
                     onChange={changeLastNameHandler}
                   />
+                  
                 </div>
                 <div className="form-group">
                   <label>Email</label>
@@ -111,7 +112,18 @@ const UpdateEmpComp = (emp) => {
                     className="form-control"
                     value={enteredEmail}
                     onChange={changeEmailHandler}
-                  />{" "}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Age</label>
+                  <input
+                    placeholder={emp.emp.age}
+                    name="email"
+                    type="text"
+                    className="form-control"
+                    value={enteredAge}
+                    onChange={changeAgeHandler}
+                  />
                 </div>
 
                 <div className="row justify-content-between">

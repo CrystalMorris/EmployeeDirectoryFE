@@ -15,6 +15,7 @@ class ListEmpComp extends Component {
   componentDidMount() {
     EmployeeService.getEmployees().then((res) => {
       this.setState({ employees: res.data });
+      console.table(this.state.employees)
     });
   }
 
@@ -25,7 +26,7 @@ class ListEmpComp extends Component {
 
   render() {
     return (
-      <div>
+      <div >
         <h2 className="text-left  subheader">
           Employees List
         </h2>
@@ -43,7 +44,7 @@ class ListEmpComp extends Component {
               </tr>
             </thead>
             <tbody>
-              {console.table(this.state.employees)}
+              
               {this.state.employees.map(
                 (employee) => (
                   <tr key={employee.id}>
@@ -63,9 +64,11 @@ class ListEmpComp extends Component {
           </table>
         </div>
         <div className="footerSpacer">
-          <p id="eol">End of List</p>
+          <p id="eol"><b>End of List</b></p>
+         
         </div>
       </div>
+      
     );
   }
 }
