@@ -22,7 +22,8 @@ class EmployeeService {
   }
 
   findEmployeesById(id) {
-    return axios.get(EMP_API_BASE_URL  + id);
+  
+    return axios.get(EMP_API_BASE_URL, {params:{id}});
   }
   updateEmployeeEmail(id, eml) {
     console.log(id + "," + eml);

@@ -22,6 +22,7 @@ class OneEmployee extends Component {
     const id = url.slice(32);
 
     EmployeeService.findEmployeesById(id).then((res) => {
+      console.log(res.data);
       this.setState(res.data);
     });
   }
