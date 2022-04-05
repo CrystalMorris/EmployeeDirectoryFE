@@ -60,6 +60,10 @@ class OneEmployee extends Component {
           <UpdateEmpComp emp={this.state} />
           
         </div>
+        <div className="footerSpacer">
+          
+         
+        </div>
       </div>
     );
   }

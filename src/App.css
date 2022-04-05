@@ -2,7 +2,11 @@
   text-align: center;
   
 } */
-#root, h2, body{
+ h2{
+  background-color: lightgrey;
+}
+#root{
+  min-height: 100vh !important;
   background-color: lightgrey;
 }
 /* .App-logo {
@@ -52,11 +56,12 @@
 .container {
   position: relative;
   top: 50px;
+  margin-bottom: 50px;
   
   
 }
 .subheader {
-  position: fixed;
+  /* position: fixed; */
   top: 50px;
   height: 100px;
   width: 100%;
