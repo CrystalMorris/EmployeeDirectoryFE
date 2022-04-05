@@ -19,7 +19,7 @@ class OneEmployee extends Component {
 
   componentDidMount() {
     const url = window.location.href;
-    const id = url.slice(32);
+    const id = url.slice(40);
 
     EmployeeService.findEmployeesById(id).then((res) => {
       console.log(res.data);
