@@ -27,10 +27,11 @@ class ListEmpComp extends Component {
   render() {
     return (
       <div >
-        <h2 className="text-center  subheader col-md-8">
+        <div className ="row">
+        <h2 className="text-center  subheader" >
           Employees List
         </h2>
- 
+        </div>
         <div className="row">
           <table className="table table-striped tabled-bordered">
             <thead>
