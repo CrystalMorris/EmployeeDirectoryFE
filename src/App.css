@@ -65,22 +65,25 @@
 }
 thead {
   height: 100px;
-  z-index: 5;
+  z-index: 8;
   position: relative;
   top: 100;
+  
 }
 th {
   color: black;
   position: sticky;
   top: 50px;
-  z-index: 4;
+  z-index: 7;
   text-align: center;
+  
 }
 h2 {
   margin-left: -15px;
   padding-left: 10px;
   padding-right: 10px;
   margin-right: -20px;
+  
 }
 .footerSpacer {
   height: 70px;

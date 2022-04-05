@@ -27,7 +27,7 @@ class ListEmpComp extends Component {
   render() {
     return (
       <div >
-        <h2 className="text-left  subheader">
+        <h2 className="text-center  subheader">
           Employees List
         </h2>
  

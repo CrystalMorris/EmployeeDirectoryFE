@@ -30,10 +30,10 @@ class OneEmployee extends Component {
   render() {
        return (
       <div>
-        <h2 className="text-center">Employee</h2>
+        <h2 className="text-center subheader">Employee</h2>
 
         <div className="row">
-          <table className="table table-striped tabled-bordered col-md-10">
+          <table className="table table-striped tabled-bordered ">
             <thead>
               <tr>
                 <th>Id</th>
