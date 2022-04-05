@@ -61,7 +61,7 @@
   
 }
 .subheader {
-  /* position: fixed; */
+  position: fixed;
   top: 50px;
   height: 100px;
   width: 100%;
