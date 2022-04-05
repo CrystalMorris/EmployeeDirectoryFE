@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const EMP_API_BASE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/";
+const EMP_API_BASE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/employees";
 const EMP_API_CREATE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/add-employee";
 const EMP_API_UPDATE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/update-employee/";
 const EMP_API_DELETE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/delete-employee/";
