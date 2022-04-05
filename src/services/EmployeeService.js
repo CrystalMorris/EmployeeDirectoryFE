@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const EMP_API_BASE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/employees";
+const EMP_API_BASE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/";
 const EMP_API_CREATE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/add-employee";
 const EMP_API_UPDATE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/update-employee/";
 const EMP_API_DELETE_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/delete-employee/";
-const EMP_API_EMPBYID_URL = "https://sb-backend-emplist.herokuapp.com/api/v1/employees/";
+
 class EmployeeService {
   getEmployees() {
     // console.log(axios.get(EMP_API_BASE_URL));
@@ -22,7 +22,7 @@ class EmployeeService {
   }
 
   findEmployeesById(id) {
-    return axios.get(EMP_API_EMPBYID_URL + id);
+    return axios.get(EMP_API_BASE_URL +'/' +id);
   }
   updateEmployeeEmail(id, eml) {
     console.log(id + "," + eml);
