@@ -57,7 +57,7 @@ const UpdateEmpComp = (emp) => {
     if (enteredAge !== "") {
       EmployeeService.updateEmployeeAge(id, enteredAge);
     }
-
+    console.log()
     alert(
       "Employee Has been Updated :" +
         emp.emp.firstName +
